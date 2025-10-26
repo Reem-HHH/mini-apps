@@ -6,12 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mini Apps — Reem</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Arabic font for the school name -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- 🧭 Header: site title and navigation dots -->
+  <!-- 🧭 Header: site title, logo, and school name -->
   <header class="site-header">
+    <div class="header-left">
+      <img src="moe-logo.png" alt="MOE Logo" class="moe-logo">
+    </div>
+
     <div class="brand">Mini Apps</div>
+
+    <div class="header-right">
+      <span class="school-name">مدرسة الضيت - ح1</span>
+    </div>
+
     <nav class="dots" aria-label="Section navigation">
       <button class="dot" data-target="#app-1" aria-label="Go to app 1"></button>
       <button class="dot" data-target="#app-2" aria-label="Go to app 2"></button>
@@ -31,45 +42,35 @@
         <h1 class="title">البيت الجديم</h1>
         <p class="subtitle">Scratch mini-game. test your reflexes.</p>
         <div class="frame-wrap">
-          <!-- 🔗 Use data-src so script.js can lazy-load when scrolled into view -->
           <iframe title="Floating Ball Game" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen
-            allowtransparency="true" data-src="https://scratch.mit.edu/projects/1233034691/embed">
-          </iframe>
+            allowtransparency="true" data-src="https://scratch.mit.edu/projects/1233034691/embed"></iframe>
         </div>
         <p class="desc">لعبة من إعداد طلاب الصف الثالث: لعبة مطابقة باستخدام برنامج سكراتش.</p>
       </div>
       <footer class="section-footer">01 / 06</footer>
     </section>
 
-    <!-- 🟡 APP 2 — Yaddoo Chatbox (moved here as second iframe) -->
+    <!-- 🟡 APP 2 — Yaddoo Chatbox -->
     <section class="snap-section" id="app-2" data-index="2">
       <div class="card">
         <h1 class="title">Yaddoo Chatbox 👵🏽</h1>
         <p class="subtitle">Kid-friendly Arabic chat experience.</p>
         <div class="frame-wrap">
-          <!-- ✅ You can embed directly from Netlify or from a local folder -->
-          <!-- Option 1: if hosted on Netlify -->
           <iframe title="Yaddoo Chatbox" width="100%" height="700" frameborder="0" scrolling="yes" allowfullscreen
-            data-src="https://yaddoo-chatbox.netlify.app/">
-          </iframe>
-
-          <!-- Option 2: if local version inside your project -->
-          <!-- <iframe title="Yaddoo Chatbox" frameborder="0" scrolling="yes" allowfullscreen data-src="yaddoo/index.html"></iframe> -->
+            data-src="https://yaddoo-chatbox.netlify.app/"></iframe>
         </div>
         <p class="desc">Warm visuals, simple UI, and gentle, family-style conversations.</p>
       </div>
       <footer class="section-footer">02 / 06</footer>
     </section>
 
-    <!-- 🟣 APP 3 — placeholder for your next app -->
+    <!-- 🟣 APP 3 — placeholder -->
     <section class="snap-section" id="app-3" data-index="3">
       <div class="card">
         <h1 class="title">App 3 Title</h1>
         <p class="subtitle">Short description of your third app.</p>
         <div class="frame-wrap">
-          <!-- ⚙️ Replace `data-src` with your real app URL -->
-          <iframe title="App 3" frameborder="0" scrolling="no" allowfullscreen data-src="">
-          </iframe>
+          <iframe title="App 3" frameborder="0" scrolling="no" allowfullscreen data-src=""></iframe>
         </div>
         <p class="desc">Add a one-line summary or unique feature here.</p>
       </div>
@@ -119,7 +120,7 @@
 
   <!-- ⚓ Footer -->
   <div class="site-footer">
-    <p>© 2025 </p>
+    <p>© 2025 Reem Al Shamsi</p>
   </div>
 
   <script src="script.js"></script>
