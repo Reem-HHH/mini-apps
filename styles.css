@@ -8,6 +8,14 @@
   --line: #e8dcc8;
   --shadow: 0 10px 30px rgba(0,0,0,.08);
 }
+
+/* Make the MOE logo a consistent, responsive size */
+img[alt = "MOE Logo"] {
+  width: 120px;       /* adjust as needed */
+  height: auto;       /* keeps proportions */
+  display: block;
+  margin: 0 auto 1rem; /* centers and adds bottom spacing */
+}
 *{ box-sizing: border-box; }
 html, body{ height: 100%; }
 body{

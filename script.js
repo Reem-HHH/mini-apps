@@ -12,6 +12,7 @@ dots.forEach(dot => {
   });
 });
 
+
 // Intersection Observer to highlight active dot and lazy-load iframes
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
