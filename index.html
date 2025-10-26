@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mini Apps — Reem</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <!-- 🧭 Header: site title and navigation dots -->
   <header class="site-header">
     <div class="brand">Mini Apps</div>
     <nav class="dots" aria-label="Section navigation">
@@ -18,77 +21,108 @@
       <button class="dot" data-target="#app-6" aria-label="Go to app 6"></button>
     </nav>
   </header>
+
+  <!-- 🌊 Main scroll container: each section = one app -->
   <main class="snap-container">
+
+    <!-- 🟢 APP 1 — Scratch game -->
     <section class="snap-section" id="app-1" data-index="1">
       <div class="card">
         <h1 class="title">البيت الجديم</h1>
         <p class="subtitle">Scratch mini-game. test your reflexes.</p>
         <div class="frame-wrap">
-          <iframe title="Floating Ball Game" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen allowtransparency="true" data-src="https://scratch.mit.edu/projects/1233034691/embed"></iframe>
+          <!-- 🔗 Use data-src so script.js can lazy-load when scrolled into view -->
+          <iframe title="Floating Ball Game" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen
+            allowtransparency="true" data-src="https://scratch.mit.edu/projects/1233034691/embed">
+          </iframe>
         </div>
-        <p class="desc">move the ball, avoid obstacles, and chase a high score.</p>
+        <p class="desc">Move the ball, avoid obstacles, and chase a high score.</p>
       </div>
       <footer class="section-footer">01 / 06</footer>
     </section>
+
+    <!-- 🟡 APP 2 — Yaddoo Chatbox (moved here as second iframe) -->
     <section class="snap-section" id="app-2" data-index="2">
       <div class="card">
-        <h1 class="title">App 2 Title</h1>
-        <p class="subtitle">short description of your second app.</p>
+        <h1 class="title">Yaddoo Chatbox 👵🏽</h1>
+        <p class="subtitle">Kid-friendly Arabic chat experience.</p>
         <div class="frame-wrap">
-          <iframe title="App 2" frameborder="0" scrolling="no" allowfullscreen data-src=""></iframe>
+          <!-- ✅ You can embed directly from Netlify or from a local folder -->
+          <!-- Option 1: if hosted on Netlify -->
+          <iframe title="Yaddoo Chatbox" width="100%" height="700" frameborder="0" scrolling="yes" allowfullscreen
+            data-src="https://yaddoo-chatbox.netlify.app/">
+          </iframe>
+
+          <!-- Option 2: if local version inside your project -->
+          <!-- <iframe title="Yaddoo Chatbox" frameborder="0" scrolling="yes" allowfullscreen data-src="yaddoo/index.html"></iframe> -->
         </div>
-        <p class="desc">add a one-line explanation of what users can do here.</p>
+        <p class="desc">Warm visuals, simple UI, and gentle, family-style conversations.</p>
       </div>
       <footer class="section-footer">02 / 06</footer>
     </section>
+
+    <!-- 🟣 APP 3 — placeholder for your next app -->
     <section class="snap-section" id="app-3" data-index="3">
       <div class="card">
-        <h1 class="title">Yaddoo Chatbox</h1>
-        <p class="subtitle">kid-friendly chat experience.</p>
+        <h1 class="title">App 3 Title</h1>
+        <p class="subtitle">Short description of your third app.</p>
         <div class="frame-wrap">
-          <iframe title="Yaddoo Chatbox" frameborder="0" scrolling="yes" data-src="yaddoo/index.html"></iframe>
+          <!-- ⚙️ Replace `data-src` with your real app URL -->
+          <iframe title="App 3" frameborder="0" scrolling="no" allowfullscreen data-src="">
+          </iframe>
         </div>
-        <p class="desc">warm visuals, simple UI, and gentle interactions.</p>
+        <p class="desc">Add a one-line summary or unique feature here.</p>
       </div>
       <footer class="section-footer">03 / 06</footer>
     </section>
+
+    <!-- 🔵 APP 4 — placeholder -->
     <section class="snap-section" id="app-4" data-index="4">
       <div class="card">
         <h1 class="title">App 4 Title</h1>
-        <p class="subtitle">short description of your fourth app.</p>
+        <p class="subtitle">Short description of your fourth app.</p>
         <div class="frame-wrap">
           <iframe title="App 4" frameborder="0" scrolling="no" allowfullscreen data-src=""></iframe>
         </div>
-        <p class="desc">quick note on goal/mechanics.</p>
+        <p class="desc">Quick note on goal/mechanics.</p>
       </div>
       <footer class="section-footer">04 / 06</footer>
     </section>
+
+    <!-- 🟠 APP 5 — placeholder -->
     <section class="snap-section" id="app-5" data-index="5">
       <div class="card">
         <h1 class="title">App 5 Title</h1>
-        <p class="subtitle">short description of your fifth app.</p>
+        <p class="subtitle">Short description of your fifth app.</p>
         <div class="frame-wrap">
           <iframe title="App 5" frameborder="0" scrolling="no" allowfullscreen data-src=""></iframe>
         </div>
-        <p class="desc">what makes this one unique.</p>
+        <p class="desc">What makes this one unique.</p>
       </div>
       <footer class="section-footer">05 / 06</footer>
     </section>
+
+    <!-- 🟤 APP 6 — placeholder -->
     <section class="snap-section" id="app-6" data-index="6">
       <div class="card">
         <h1 class="title">App 6 Title</h1>
-        <p class="subtitle">short description of your sixth app.</p>
+        <p class="subtitle">Short description of your sixth app.</p>
         <div class="frame-wrap">
           <iframe title="App 6" frameborder="0" scrolling="no" allowfullscreen data-src=""></iframe>
         </div>
-        <p class="desc">final app — wrap up line.</p>
+        <p class="desc">Final app — wrap-up line.</p>
       </div>
       <footer class="section-footer">06 / 06</footer>
     </section>
+
   </main>
+
+  <!-- ⚓ Footer -->
   <div class="site-footer">
     <p>© 2025 Reem Al Shamsi</p>
   </div>
+
   <script src="script.js"></script>
 </body>
+
 </html>
