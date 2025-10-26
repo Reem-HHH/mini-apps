@@ -2,7 +2,7 @@
 const sections = Array.from(document.querySelectorAll('.snap-section'));
 const dots = Array.from(document.querySelectorAll('.dot'));
 
-// Smooth scroll when clicking dots
+// ✅ Smooth scroll when clicking dots
 dots.forEach(dot => {
   dot.addEventListener('click', () => {
     const targetSection = document.querySelector(dot.dataset.target);
@@ -12,9 +12,8 @@ dots.forEach(dot => {
   });
 });
 
-
-// Intersection Observer to highlight active dot and lazy-load iframes
-const observer = new IntersectionObserver((entries) => {
+// ✅ Intersection Observer: highlights active dot + lazy-loads iframes
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     const section = entry.target;
     const index = Number(section.dataset.index) - 1;
@@ -24,12 +23,14 @@ const observer = new IntersectionObserver((entries) => {
       dots.forEach(d => d.classList.remove('active'));
       if (dots[index]) dots[index].classList.add('active');
 
-      // Lazy-load iframes
+      // Lazy-load iframes (only once)
       const iframes = section.querySelectorAll('iframe[data-src]');
       iframes.forEach(iframe => {
         if (!iframe.src && iframe.dataset.src) {
           iframe.src = iframe.dataset.src;
+          iframe.style.opacity = '0';
           iframe.addEventListener('load', () => {
+            iframe.style.transition = 'opacity 0.6s ease';
             iframe.style.opacity = '1';
           }, { once: true });
         }
@@ -41,5 +42,5 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.6
 });
 
-// Observe each section
+// ✅ Observe each section
 sections.forEach(section => observer.observe(section));
